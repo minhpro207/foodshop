@@ -34,7 +34,12 @@ export default function Layout({ title, children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ToastContainer position="bottom-center" limit={5} />
+      <ToastContainer
+        pauseOnHover={false}
+        autoClose="1500"
+        position="top-right"
+        limit={3}
+      />
 
       <div className="flex min-h-screen flex-col justify-between">
         <header>
