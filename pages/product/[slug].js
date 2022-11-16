@@ -5,13 +5,13 @@ import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
 import Layout from '../../components/Layout';
 import Product from '../../models/Product';
-import data from '../../utils/data';
 import db from '../../utils/db';
 import { Store } from '../../utils/Store';
 
 export default function ProductScreen(props) {
   const { product } = props;
   const { state, dispatch } = useContext(Store);
+  const router = useRouter();
 
   if (!product) {
     return <Layout title="Product Not Found">Product Not Found</Layout>;
@@ -23,12 +23,12 @@ export default function ProductScreen(props) {
     const { data } = await axios.get(`/api/products/${product._id}`);
 
     if (data.countInStock < quantity) {
-      toast.error('Out of stock');
-      return;
+      return toast.error('Out of stock');
     }
 
     dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
     toast.success('Item added');
+    router.push('/cart');
   };
 
   return (
