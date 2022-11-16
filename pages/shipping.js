@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie';
-import { Router, useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import React, { useContext, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import CheckoutWizard from '../components/CheckoutWizard';

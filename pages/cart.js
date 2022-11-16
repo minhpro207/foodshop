@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 function CartScreen() {
   const router = useRouter();
@@ -46,12 +47,12 @@ function CartScreen() {
                     <td>
                       <Link href={`/product/${item.slug}`}>
                         <p className="flex items-center">
-                          <img
+                          <Image
                             src={`/${item.image}`}
                             alt={item.name}
                             width={50}
                             height={50}
-                          />
+                          ></Image>
                           &nbsp;
                           {item.name}
                         </p>

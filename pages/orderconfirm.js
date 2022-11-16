@@ -8,6 +8,7 @@ import CheckoutWizard from '../components/CheckoutWizard';
 import Layout from '../components/Layout';
 import { getError } from '../utils/error';
 import { Store } from '../utils/Store';
+import Image from 'next/image';
 
 export default function OrderconfirmScreen() {
   const { state, dispatch } = useContext(Store);
@@ -109,8 +110,8 @@ export default function OrderconfirmScreen() {
                       <td>
                         <Link href={`/product/${item.slug}`}>
                           <p className="flex items-center">
-                            <img
-                              src={item.image}
+                            <Image
+                              src={`/${item.image}`}
                               alt={item.name}
                               width={50}
                               height={50}

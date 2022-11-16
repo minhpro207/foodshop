@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useContext } from 'react';
@@ -38,7 +39,7 @@ export default function ProductScreen(props) {
       </div>
       <div className="grid md:grid-cols-4 md:gap-3">
         <div className="md:col-span-2">
-          <img
+          <Image
             src={`/${product.image}`}
             alt={product.name}
             width={560}
