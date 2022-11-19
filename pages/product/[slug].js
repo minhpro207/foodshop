@@ -40,12 +40,12 @@ export default function ProductScreen(props) {
       <div className="grid md:grid-cols-4 md:gap-3">
         <div className="md:col-span-2">
           <Image
-            src={`/${product.image}`}
+            src={product.image}
             alt={product.name}
             width={560}
             height={560}
             layout="responsive"
-          />
+          ></Image>
         </div>
         <div>
           <ul>

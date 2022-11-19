@@ -7,12 +7,12 @@ export default function ProductItem({ product }) {
     <div className="card">
       <Link href={`/product/${product.slug}`}>
         <Image
-          src={`/${product.image}`}
+          src={product.image}
           alt={product.name}
           width={560}
           height={560}
-          className="m-auto rounded shadow w-40 h-40"
-        />
+          className="rounded shadow object-cover h-64 w-full"
+        ></Image>
       </Link>
       <div className="flex flex-col items-center justify-center p-5">
         <Link href={`/product/${product.slug}`}>

@@ -111,11 +111,11 @@ export default function OrderconfirmScreen() {
                         <Link href={`/product/${item.slug}`}>
                           <p className="flex items-center">
                             <Image
-                              src={`/${item.image}`}
+                              src={item.image}
                               alt={item.name}
                               width={50}
                               height={50}
-                            />
+                            ></Image>
                             &nbsp;
                             {item.name}
                           </p>
