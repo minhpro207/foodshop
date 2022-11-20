@@ -108,9 +108,6 @@ export default function AdminProdcutsScreen() {
                 <p className="font-bold">Products</p>
               </Link>
             </li>
-            <li>
-              <Link href="/admin/users">Users</Link>
-            </li>
           </ul>
         </div>
         <div className="overflow-x-auto md:col-span-3">

@@ -92,9 +92,6 @@ function AdminDashboardScreen() {
             <li>
               <Link href="/admin/products">Products</Link>
             </li>
-            <li>
-              <Link href="/admin/users">Users</Link>
-            </li>
           </ul>
         </div>
         <div className="md:col-span-3">
@@ -120,11 +117,6 @@ function AdminDashboardScreen() {
                   <p className="text-3xl">{summary.productsCount} </p>
                   <p>Products</p>
                   <Link href="/admin/products">View products</Link>
-                </div>
-                <div className="card m-5 p-5">
-                  <p className="text-3xl">{summary.usersCount} </p>
-                  <p>Users</p>
-                  <Link href="/admin/users">View users</Link>
                 </div>
               </div>
               <h2 className="text-xl">Sales Report</h2>
